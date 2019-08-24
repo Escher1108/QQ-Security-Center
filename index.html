@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Mirrored from gvbgzc.cn/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Jun 2019 03:28:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=uf8" /><!-- /Added by HTTrack -->
+<head>
+		<meta http-equiv="content-type" content="text/html; charset=GBK">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+		<link rel="stylesheet" rev="stylesheet" href="v2/css3/common.css">
+		<link rel="stylesheet" rev="stylesheet" href="v2/css3/unfreeze.css">
+		<script type="text/javascript" src="v2/js/jquery.min2d4c.js?v=2.3"></script>
+		<script type="text/javascript" src="v2/js/check2d4c.js?v=2.3"></script>
+		<title>首页 - ＱＱ安全中心 - 用心守护你的ＱＱ</title>
+	</head>
+	<!--[if lt IE 9]> 
+	<script src="v2/js/html5.js"></script> 
+	<![endif]-->
+	
+<!--Header-->
+<body><div id="headerAll">
+	<div class="round" id="login_alert" style="display:none;z-index:10003;left:30%;top:30%;">
+    	<div class="r_top"></div>
+		<div class="round_container">
+             <div class="r_title">用户登录<a onfocus="this.blur()" class="close" href="javascript:alert_login_close();"></a></div>
+             <div class="round_content">
+           			<iframe style="background-color:transparent;margin:0 0 10px 10px;width:370px; height:180px;" allowtransparency="true" name="embed_login_frame" id="embed_login_frame" frameborder="0" scrolling="no" src="login/nullcode_login.html"></iframe>    
+          </div>
+        </div>
+        <div class="r_bottom"></div>
+	</div>
+
+<script>
+
+function alert_login(url,isauto,lang,target){
+	if(document.getElementById("login_alert").style.display=="block")
+	{
+		return ;
+	}
+	if (typeof lang == "undefined")
+	{
+		lang=0;				//默认是简体中文
+	}
+	if(typeof url== "undefined")
+	{
+		url = "";
+	}
+	if(typeof isauto== "undefined")
+	{
+		isauto = true;
+	}
+	if (typeof target == "undefined")
+	{
+		target="top";				//默认是简体中文
+	}
+		 if (document.body.clientHeight)	
+		{
+			var sHeight = document.body.clientHeight ;
+		}
+		else if (window.innerHeight)
+		{
+			var sHeight = window.innerHeight ;
+		}
+
+		if (document.body.clientWidth)	
+		{
+			var sWidth = document.body.clientWidth;
+		}
+		else if (window.innerWidth)
+		{
+			var sWidth = window.innerWidth;
+		}
+		var ptLoginUrl = window.location.protocol + "login/nullcode_login.php";
+		var deturl = escape(getHost() + url);
+		if(url.indexOf("http") == 0)
+		{
+			deturl = escape(url);
+		}
+		var s_url = (0 == url.length ? escape(window.location.href) : deturl);
+		var param = ""
+		var loginSrc = ptLoginUrl + param;
+		document.getElementById("embed_login_frame").src = loginSrc;
+		 var loginDiv = document.getElementById("login_alert");
+		if(isauto)
+		{
+			if(isIE6())
+			{
+				setCenter();
+			}
+			else
+			{
+				loginDiv.style.position = "fixed";
+				loginDiv.style.top = "27%";
+				loginDiv.style.left = "40%";
+				var FrameMarginTop =  -loginDiv.offsetHeight / 2 + "px";
+				var FrameMarginLeft = -loginDiv.offsetWidth / 2 + "px";
+				loginDiv.marginTop =   FrameMarginTop;
+				loginDiv.marginLeft = FrameMarginLeft;
+			}
+			
+		}
+		loginDiv.style.display = "block";
+}
+function alert_login_close()
+{
+	document.getElementById("login_alert").style.display = "none";
+}
+function ptlogin2_onResize(width, height) 
+{
+		//var outter_wnd = document.getElementById("login_round_info");
+		var outter_wnd = document.getElementById("embed_login_frame");
+		if (outter_wnd)	{
+			
+			outter_wnd.style.width = 350+"px";
+			outter_wnd.style.height = 315+ "px";
+			
+		}
+}
+
+function ptlogin2_onClose(){
+		login_wnd = document.getElementById("login");	
+		login_wnd.style.display="none"
+		mybg = document.getElementById("mybg");
+		mybg.style.display = "none";
+		document.body.removeChild(mybg);
+}
+function getHost() {
+	return window.location.protocol + "//" + window.location.host;
+}
+function isIE6()
+{
+	var isIE = (document.all)?true:false;
+	is_IE6 = isIE && ([/MSIE (\d)\.0/i.exec(navigator.userAgent)][0][1] == 6);
+	return is_IE6;
+}
+/*
+ *兼容IE6的居中定位
+ */
+function setCenter(){
+			$("#login_alert").css("position","absolute");
+			var FrameMarginTop =  document.documentElement.scrollTop - document.getElementById("login_alert").offsetHeight/2 + "px";
+			var FrameMarginLeft = document.documentElement.scrollLeft  - document.getElementById("login_alert").offsetWidth/2 + "px";
+			$("#login_alert").css({"marginTop":FrameMarginTop,"marginLeft":FrameMarginLeft});
+		}
+</script>
+
+
+
+		<!--Header-->
+<div id="header_s">
+	<div class="header">
+		<a target="_blank" class="header_logo" title="QQ安全中心首页"><span>QQ安全中心首页</span></a>
+		<div class="header_left">
+			<ul class="header_nav">
+				<li><a><span><img src="images/im/0.png"></span></a></li>
+				<li>|</li>
+				<li><a href="javascript:alert_login('');"><span><img src="images/im/1.png"></span></a></li>
+				<li>|</li>
+				<li><a href="javascript:alert_login('');"><span><img src="images/im/2.png"></span></a></li>
+				<li>|</li>
+				<li><a href="javascript:alert_login('');"><span><img src="images/im/3.png"></span></a></li>
+				<li>|</li>
+				<li><a href="javascript:alert_login('');"><span><img src="images/im/4.png"></span></a></li>
+			</ul>
+		</div>
+		<div class="header_right">
+			<ul class="header_menu">
+				<li><a class="header_icon_wb" target="_blank"><span>官方微博</span></a></li>
+			</ul>
+		</div>
+	</div> 
+</div>
+<!--Header end-->
+
+		
+		<!--Main-->
+		<div id="main">
+			<!--main_top-->
+			<div class="main_top">
+				<a href="javascript:alert_login('');" class="unfreeze_logo" title="解除保护模式"><span>解除保护模式</span></a>
+				<a href="javascript:alert_login('');" class="icon icon_comment" title="我要反馈"><span>我要反馈</span></a>
+			</div>
+			<!--main_top end-->
+	
+			<!--main_content-->
+			<div class="main_content">
+				<div class="content">
+					<!-- 证据 开始 -->
+					<div class="mod_evidence">
+						<!-- 雷达 开始 -->
+						<div class="radar">
+						</div>
+						<!-- 雷达 结束 -->
+				
+						<!-- 事件列表 开始 -->
+						<div class="sheet">
+							<div><img src="images/im/6.png"></div>
+							<table>
+								<thead>
+									<tr>
+								
+									</tr>
+								
+							</thead></table>
+							<div class="button">
+								<a href="javascript:alert_login('');" class="btn" title="立即申请取消"><span>&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/im/11.png">&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+								<p><span><img src="images/im/26.png"></span></p>
+							</div>
+						</div>
+						<!-- 事件列表 结束 -->
+						
+					</div>
+					<!-- 证据 结束 -->
+				</div>
+			</div>
+			<!--main_content end-->
+		</div>
+		<!--Main end-->
+		
+		<div class="round" id="div_iwanttosay" style="display:none;">
+			<div class="round_content">
+				<div class="survey" id="say_survey">
+					<form name="say_type_form" id="say_type_form" action="#" method="get">
+						<h3 class="f14 mt10">QQ被盗后，您需要保护模式为您限制QQ登录吗？</h3>
+						<ul class="mt5">
+							<li>
+								<input type="radio" checked="checked" name="saytype" value="1">
+								<label for="">非常需要</label>
+							</li>
+							<li>
+								<input type="radio" name="saytype" value="2">
+								<label for="">需要</label>
+							</li>
+							<li>
+								<input type="radio" name="saytype" value="3">
+								<label for="">一般</label>
+							</li>
+							<li>
+								<input type="radio" name="saytype" value="4">
+								<label for="">不需要</label>
+							</li>
+							<li>
+								<input type="radio" name="saytype" value="5">
+								<label for="">非常不需要</label>
+							</li>
+						</ul>
+					</form>
+				</div>
+				<div class="round_info" id="say_success" style="display:none">
+					<i class="succeed3"></i>
+					<h3>反馈成功！</h3>
+					<p>如有更多建议，欢迎您<a target="_blank" href="http://support.qq.com/write.shtml?fid=387&amp;ADPUBNO=">点此反馈</a></p>
+				</div>
+			</div>
+			<div class="round_button">
+				<a onfocus="this.blur()" class="button" id="say_cancel" href="javascript:CAqCommFrame.close();"><span>取消</span></a>
+				<a onfocus="this.blur()" class="button1" id="say_summit" href="javascript:iwanttosay_result();"><span>提交</span></a>
+				<a onfocus="this.blur()" class="button1" id="say_enter" href="javascript:CAqCommFrame.close();" style="display:none"><span>关&nbsp;&nbsp;闭</span></a>
+			</div>
+		</div>
+<div id="footer">
+<div id="footer">
+  <p><a href="http://www.tencent.com/" target="_blank">关于腾讯</a>|<a href="http://www.tencent.com/index_e.shtml" target="_blank">About Tencent</a>|<a href="http://www.qq.com/contract.shtml" target="_blank">服务条款</a>|<a href="http://hr.tencent.com/" target="_blank">腾讯招聘</a>|<a href="http://kf.qq.com/special_auto/aq.html" target="_blank">腾讯客服<span id="debug"></span></a></p>
+  <p>Copyright ? 1998 - 2016 Tencent. All Rights Reserved </p>
+  <p>腾 讯 公 司 版 权 所 有</p>
+</div>
+
+</div></div></body>
+<!-- Mirrored from gvbgzc.cn/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Jun 2019 03:28:09 GMT -->
+</html>
+	

@@ -1,0 +1,38 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{font-family:Tahoma,Verdana,Arial,宋体;font-size:12px;margin:0;background-color:transparent;}
+h1,h2,h3,h4{padding:0;margin:0;}
+a{color:#889db6;text-decoration:none;}
+a:hover{color:#889db6;text-decoration:underline;}
+.inputstyle{width:200px;height:20px;line-height:20px;border-color:#7C7C7C #bbb #bbb #7C7C7C;border-style:solid;border-width:1px;color:#333;font-family:Arial,"宋体";font-size:14px;line-height:normal;padding:3px 4px 2px 4px;background:#f9fbfc;}
+#login{border:none;}
+#login ul{padding:10px 0 0 0;margin:0;}
+#login ul li{list-style-type:none;padding:10px 0 5px 0;*padding:8px 0 5px 0;}
+#login ul li span{float:left;text-align:left;padding-top:7px;color:#333;}
+#login ul li u{text-decoration:none;font-size:14px;}
+#login ul li.col{padding:0px 0 0 49px;}
+#login ul li#err_m{display:none;padding:5px 0 0 0;color:#f00;}
+#login #verifytip{color:#808080;padding:0 0 7px 0;}
+#login #verifyinput{padding:10px 0 0 6px;*padding:8px 0 0 6px;}
+#login #label_vcode_tip{display:inline-block;font-size:12px;padding:5px 0 0 57px;}
+#login #verifyshow{padding:0 0 0 57px;}
+#login #changeimg_link{line-height:53px;}
+#login em{color:#F00;padding:0 3px;font-style:normal;}
+#login p{padding:0 0 0 32px;margin:0;color:#535353;}
+#login label{padding:0 0 0 8px;color:#535353;position:absolute;margin-top:10px;}
+#login .low_login{margin-top:0;}
+#login .login_button{margin:0 auto;height:20px;padding:12px 0 0 62px;float:none;}  
+#login .lineright{line-height:20px;height:20px;padding:0 10px 0 0;text-align:right;}
+#login .linemid{float:left;width:270px;padding:10px 0 0 30px;color:#cc0000;visibility:hidden;}
+.list_name{padding:30px 10px 0 30px;}
+.list_name p{padding:0 0 0 20px; margin:0px;}   
+#list_uin li{height:24px;list-style:none;margin:0 0 0 7px;padding:0;}
+#list_uin li input{margin:7px 0 0 7px;}
+.btn_select,.btn{float:left;width:95px;height:36px;line-height:30px;margin:15px 15px 0 0;cursor:pointer;border:0px;color:#fcffff;font-weight:bold;font-size:16px;background:url(login_bg.png);font-family:"微软雅黑";}
+.btn{margin-top:0px;}
+
+    
+
+
+
+/*  |xGv00|992994d061b44246c232fb295190f0b4 */
