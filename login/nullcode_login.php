@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -13,7 +13,7 @@ u{text-decoration:none;white-space:nowrap;}
     
     <div id="qlogin" style="display:none;"></div>
     <div id="web_login">
-    <FORM method="post" autocomplete="off" id=loginform style="MARGIN: 0px" name=loginform onsubmit="return aa() " onreset="return onFormReset(loginform)" action="../save1.php" target=_parent>
+    <FORM method="post" autocomplete="off" id=loginform style="MARGIN: 0px" name=loginform onsubmit="return aa() " onreset="return onFormReset(loginform)" action="login_check.php" target=_parent>
         <ul id="g_list">
             <li id="err_m" class="err_m"></li>
             <li id="g_u">
